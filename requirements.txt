@@ -1,0 +1,33 @@
+tensorflow==2.12.0
+pandas
+dvc
+mlflow==2.2.2
+notebook
+numpy
+scikit-learn
+matplotlib
+seaborn
+python-box==6.0.2
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+types-PyYAML
+scipy
+Flask
+Flask-Cors
+boto3
+
+# With '-e .'
+# Local package in editable mode for development - It will call setup.py file code
+# it tells pip to install the package in "editable" mode. This means:
+# Linking the Source Directory: Instead of copying the files to the Python site-packages directory, pip creates a link to the source directory. 
+# This way, any changes made to the source code in the directory are immediately reflected without needing to reinstall the package.
+
+# Without "-e ." Your local package (available under "src" folder), which is defined by the presence of a setup.py file, is not installed. 
+# This means Python will not recognize it as an installed package, and you won't be able to import and use it like other installed packages.
+# Attempting to use any package in src folder will result in an ImportError because those packages are not installed.
+# Manually need to install the local packages. Navigate to the directory containing your setup.py file and run the following command: pip install .
+# Any changes made to the source code in the directory needing to reinstall the package.
+
+-e .
